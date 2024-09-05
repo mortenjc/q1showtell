@@ -1,5 +1,3 @@
-''' z80 emulator '''
-
 import z80
 
 # Performs the first 10 instructions on the uninitialised system
@@ -53,8 +51,7 @@ for i, inst in enumerate(program2):
 
 # A memory hexdump emerges
 dump = [ f'{x:02x}' for x in m.memory[0:0x10]]
-print('0000:',' '.join(dump))
-print()
+print('0000:',' '.join(dump), '\n')
 
 m.pc = 0x0000
 for i in range(10):

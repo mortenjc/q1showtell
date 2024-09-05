@@ -1,5 +1,3 @@
-''' z80 emulator '''
-
 import z80
 
 # Performs the first 10 instructions on the uninitialised system
@@ -17,7 +15,7 @@ b = z80.Z80InstrBuilder()
 
 for i in range(0x10):
     m.memory[i] = INCA
-print(bytes(m.memory[0:0x10]))
+print(list(bytes(m.memory[0:0x10])))
 
 m.pc = 0x0000
 for i in range(10):

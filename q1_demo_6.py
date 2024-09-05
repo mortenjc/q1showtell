@@ -1,5 +1,3 @@
-''' z80 emulator '''
-
 import z80
 
 # Performs the first 10 instructions on the uninitialised system

@@ -1,14 +1,16 @@
-''' z80 emulator '''
-
 import z80
 
+# Performs the first 10 instructions on the uninitialised system
+# prints the program counter and three register values
+# Performs the first 10 instructions on system initialised with
+# inc a commands
+# https://clrhome.org/table/
+# add instruction opcodes/operands and more registers
+# Performs the first 10 instructions on system initialised with a 'program'
 # Performs the first 10 instructions on system initialised with two program
 # snippets: program, program2
-# prints the program counter, stack pointer and most register values
-# add instruction opcodes/operands and more registers
 # add assembly mnemonics
 # capture IO
-# https://clrhome.org/table/
 
 def handle_io_out(outaddr, outval):
     addr = outaddr & 0xff
