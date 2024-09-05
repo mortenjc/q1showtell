@@ -2,8 +2,10 @@
 
 import z80
 
-# Performs the first 10 instructions on system initialised with inc a commands
-# prints the program counter, stack pointer and three register values
+# Performs the first 10 instructions on the uninitialised system
+# prints the program counter and three register values
+# Performs the first 10 instructions on system initialised with
+# inc a commands
 # https://clrhome.org/table/
 
 INCA = 0x3c

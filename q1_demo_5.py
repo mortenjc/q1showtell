@@ -2,11 +2,17 @@
 
 import z80
 
+# Performs the first 10 instructions on the uninitialised system
+# prints the program counter and three register values
+# Performs the first 10 instructions on system initialised with
+# inc a commands
+# https://clrhome.org/table/
+# add instruction opcodes/operands and more registers
+# Performs the first 10 instructions on system initialised with a 'program'
 # Performs the first 10 instructions on system initialised with two program
 # snippets: program, program2
-# prints the program counter, stack pointer and most register values
-# add instruction opcodes/operands and more registers
-# https://clrhome.org/table/
+
+
 
 MAX_INSTR_SIZE = 4
 INCA = 0x3c
