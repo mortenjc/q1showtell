@@ -1,0 +1,21 @@
+''' z80 emulator '''
+
+import z80
+
+# Performs the first 10 instructions on system initialised with inc a commands
+# prints the program counter, stack pointer and three register values
+# https://clrhome.org/table/
+
+INCA = 0x3c
+
+m = z80.Z80Machine()
+
+for i in range(0x10):
+    m.memory[i] = INCA
+print(bytes(m.memory[0:0x10]))
+
+m.pc = 0x0000
+for i in range(10):
+    print(f'{m.pc:04x}:            ; sp: {m.sp}, a: {m.a:02x}, bc: {m.bc}')
+    m.ticks_to_stop = 1
+    m.run()
